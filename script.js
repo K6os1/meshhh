@@ -1,27 +1,90 @@
-// menu-data.js - All Menu Items
-const menuItems = {
-    appetizers: [
-        { name: "Truffle Arancini", price: "$12", desc: "Crispy risotto balls, mozzarella, black truffle aioli", tag: "Vegetarian", icon: "🍄" },
-        { name: "Bruschetta Trio", price: "$10", desc: "Tomato basil, roasted peppers, mushroom & ricotta", tag: "Shareable", icon: "🍅" },
-        { name: "Charred Octopus", price: "$16", desc: "Smoked paprika, fingerling potatoes, lemon herb", tag: "Gluten-Free", icon: "🐙" },
-        { name: "Butternut Squash Soup", price: "$8", desc: "Toasted pumpkin seeds, crème fraîche", tag: "Vegan", icon: "🥣" }
-    ],
-    mains: [
-        { name: "Grass-Fed Ribeye", price: "$34", desc: "Herb butter, roasted garlic mash, seasonal vegetables", tag: "Signature", icon: "🥩" },
-        { name: "Miso Glazed Salmon", price: "$28", desc: "Soba noodle salad, snap peas, sesame ginger", tag: "Healthy", icon: "🐟" },
-        { name: "Wild Mushroom Risotto", price: "$22", desc: "Arborio rice, porcini, truffle oil, parmesan", tag: "Vegetarian", icon: "🍚" },
-        { name: "Duck Breast Confit", price: "$32", desc: "Cherry gastrique, potato puree, haricots verts", tag: "Chef's Pick", icon: "🦆" }
-    ],
-    desserts: [
-        { name: "Salted Caramel Crème Brûlée", price: "$9", desc: "Vanilla bean custard, caramelized sugar crust", tag: "Classic", icon: "🍮" },
-        { name: "Chocolate Lava Cake", price: "$10", desc: "Warm dark chocolate, raspberry coulis, vanilla gelato", tag: "Decadent", icon: "🍫" },
-        { name: "Lemon Ricotta Cheesecake", price: "$9", desc: "Blueberry compote, candied lemon zest", tag: "Seasonal", icon: "🍰" },
-        { name: "Affogato", price: "$7", desc: "Vanilla gelato, espresso shot, amaretti cookie", tag: "Coffee Lover", icon: "☕" }
-    ],
-    beverages: [
-        { name: "Signature Old Fashioned", price: "$14", desc: "Bourbon, bitters, orange essence, cherry", tag: "Cocktail", icon: "🥃" },
-        { name: "Rosé Spritz", price: "$12", desc: "Provence rosé, elderflower, soda, mint", tag: "Refreshing", icon: "🥂" },
-        { name: "Craft Mocktail 'Sunset'", price: "$8", desc: "Passionfruit, ginger beer, lime, agave", tag: "Non-Alcoholic", icon: "🧃" },
-        { name: "Local Cold Brew", price: "$5", desc: "Small-batch roasted, served over ice", tag: "Caffeine", icon: "☕" }
-    ]
-};
+// main.js - Menu Rendering & Interactions
+document.addEventListener('DOMContentLoaded', function() {
+    // Helper function to create menu card DOM elements
+    function createMenuItemCard(item) {
+        const card = document.createElement('div');
+        card.className = 'menu-card';
+        
+        // Image area with emoji/icon
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'card-img';
+        imgDiv.innerHTML = `<span style="font-size: 3.5rem;">${item.icon || '🍽️'}</span>`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'card-content';
+        
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'dish-header';
+        
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'dish-name';
+        nameSpan.textContent = item.name;
+        
+        const priceSpan = document.createElement('span');
+        priceSpan.className = 'dish-price';
+        priceSpan.textContent = item.price;
+        
+        headerDiv.appendChild(nameSpan);
+        headerDiv.appendChild(priceSpan);
+        
+        const descPara = document.createElement('p');
+        descPara.className = 'dish-desc';
+        descPara.textContent = item.desc;
+        
+        const tagSpan = document.createElement('span');
+        tagSpan.className = 'dish-tag';
+        tagSpan.innerHTML = `<i class="fas fa-tag"></i> ${item.tag}`;
+        
+        contentDiv.appendChild(headerDiv);
+        contentDiv.appendChild(descPara);
+        contentDiv.appendChild(tagSpan);
+        
+        card.appendChild(imgDiv);
+        card.appendChild(contentDiv);
+        
+        return card;
+    }
+    
+    // Render each section if the grid container exists on page
+    const appetizersGrid = document.getElementById('appetizers-grid');
+    if (appetizersGrid && menuItems.appetizers) {
+        menuItems.appetizers.forEach(item => {
+            appetizersGrid.appendChild(createMenuItemCard(item));
+        });
+    }
+    
+    const mainsGrid = document.getElementById('mains-grid');
+    if (mainsGrid && menuItems.mains) {
+        menuItems.mains.forEach(item => {
+            mainsGrid.appendChild(createMenuItemCard(item));
+        });
+    }
+    
+    const dessertsGrid = document.getElementById('desserts-grid');
+    if (dessertsGrid && menuItems.desserts) {
+        menuItems.desserts.forEach(item => {
+            dessertsGrid.appendChild(createMenuItemCard(item));
+        });
+    }
+    
+    const beveragesGrid = document.getElementById('beverages-grid');
+    if (beveragesGrid && menuItems.beverages) {
+        menuItems.beverages.forEach(item => {
+            beveragesGrid.appendChild(createMenuItemCard(item));
+        });
+    }
+    
+    // Smooth scroll for any anchor links (if any)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId !== '#' && targetId !== '#') {
+                const targetElem = document.querySelector(targetId);
+                if (targetElem) {
+                    e.preventDefault();
+                    targetElem.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
