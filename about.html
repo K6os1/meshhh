@@ -1,84 +1,128 @@
-<!-- about.html - About the Restaurant -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Savory Bites</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — iFoods Restaurant</title>
+  <meta name="description" content="The story behind iFoods — our passion, our team, and our philosophy." />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <h1>Savory Bites</h1>
-                    <p>FARM TO TABLE • MODERN CUISINE</p>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Menu</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<div class="about-hero">
+  <div class="about-hero-bg"></div>
+  <div class="about-hero-content">
+    <span class="section-tag">Est. 2010</span>
+    <h1>Passion on <em style="font-style:italic;color:var(--gold)">Every Plate</em></h1>
+  </div>
+</div>
+
+<!-- ══════════════ STORY ══════════════ -->
+<div class="section">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&q=80" alt="Restaurant interior" />
+    </div>
+    <div class="about-text reveal">
+      <span class="section-tag">Our Story</span>
+      <h2>More Than a Meal — An Experience</h2>
+      <p>iFoods was born from a simple belief: that great food is one of the most profound forms of hospitality. Founded in 2010 by Chef Marco Diaz, our restaurant set out to challenge what dining could mean in a modern world.</p>
+      <p>Every dish tells a story — of the farmer who grew the ingredient, the chef who transformed it, and the guest who experiences it. We believe in whole-table dining, where conversation flows as freely as the wine, and time slows down just enough to savour what matters.</p>
+      <p>Over a decade later, we remain committed to our founding philosophy: exceptional seasonal ingredients, honest cooking, and a room that feels like home — just considerably better dressed.</p>
+      <div class="stats-row">
+        <div>
+          <span class="stat-num">14+</span>
+          <span class="stat-label">Years of Service</span>
         </div>
-    </header>
-
-    <main>
-        <section class="about-hero">
-            <div class="container">
-                <h1>Our Story</h1>
-            </div>
-        </section>
-
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>From Passion to Plate</h2>
-                    <p>Founded in 2018 by Chef Elena Rossi, Savory Bites began as a small dream to bring authentic, farm-driven cuisine to Foodville. With a background in Michelin-starred kitchens, Elena wanted to create a space where quality ingredients and warm hospitality come first — without pretension.</p>
-                    <p>Our menu changes with the seasons, inspired by local farmers' markets and artisanal producers. Every dish tells a story of sustainability, creativity, and the love of honest cooking.</p>
-                    <p>We believe that great food is about connection: to the earth, to each other, and to the simple joy of a delicious meal. Whether you join us for a weeknight dinner or a special celebration, you're part of our family.</p>
-                </div>
-                <div class="about-image">
-                    <i class="fas fa-utensils"></i>
-                    <i class="fas fa-leaf"></i>
-                </div>
-            </div>
+        <div>
+          <span class="stat-num">3</span>
+          <span class="stat-label">Industry Awards</span>
         </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4>Savory Bites</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 42 Gourmet Street, Foodville, CA 90210</p>
-                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> hello@savorybites.com</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Hours</h4>
-                    <p>Mon - Thu: 11am - 9pm</p>
-                    <p>Fri - Sat: 11am - 10pm</p>
-                    <p>Sunday: 10am - 8pm (Brunch)</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Savory Bites — Menu display only. Reservations by phone.</p>
-            </div>
+        <div>
+          <span class="stat-num">40k+</span>
+          <span class="stat-label">Happy Guests</span>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <script src="main.js"></script>
+<!-- ══════════════ PHILOSOPHY ══════════════ -->
+<div class="band">
+  <div class="section">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Philosophy</span>
+      <h2>The iFoods Principles</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;" class="reveal">
+
+      <div style="padding:2.5rem;background:var(--card-bg);border:1px solid var(--border);border-top:2px solid var(--gold);">
+        <span style="font-size:2rem;display:block;margin-bottom:1.2rem;">🌿</span>
+        <h4 style="font-family:var(--font-display);font-size:1.3rem;color:var(--white);margin-bottom:0.8rem;">Seasonal First</h4>
+        <p style="font-size:0.95rem;color:var(--muted);">Our menu changes with the seasons. We work directly with local farms to source what is freshest and most flavourful right now — not what is simply available.</p>
+      </div>
+
+      <div style="padding:2.5rem;background:var(--card-bg);border:1px solid var(--border);border-top:2px solid var(--gold);">
+        <span style="font-size:2rem;display:block;margin-bottom:1.2rem;">🔥</span>
+        <h4 style="font-family:var(--font-display);font-size:1.3rem;color:var(--white);margin-bottom:0.8rem;">Timeless Technique</h4>
+        <p style="font-size:0.95rem;color:var(--muted);">We respect classical cooking methods while embracing modern precision. Every technique we use serves the ingredient — never the other way around.</p>
+      </div>
+
+      <div style="padding:2.5rem;background:var(--card-bg);border:1px solid var(--border);border-top:2px solid var(--gold);">
+        <span style="font-size:2rem;display:block;margin-bottom:1.2rem;">🤝</span>
+        <h4 style="font-family:var(--font-display);font-size:1.3rem;color:var(--white);margin-bottom:0.8rem;">Genuine Hospitality</h4>
+        <p style="font-size:0.95rem;color:var(--muted);">Our service style is warm, knowledgeable, and never stiff. We want every guest to feel genuinely welcome, not merely attended to.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ TEAM ══════════════ -->
+<div class="section">
+  <div class="section-header reveal">
+    <span class="section-tag">Meet the Team</span>
+    <h2>The Faces Behind the Food</h2>
+  </div>
+
+  <div class="chef-grid">
+    <div class="chef-card reveal">
+      <div style="overflow:hidden;">
+        <img class="chef-card-img" src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=500&q=80" alt="Chef Marco Diaz" />
+      </div>
+      <div class="chef-info">
+        <span class="chef-name">Marco Diaz</span>
+        <span class="chef-role">Head Chef &amp; Founder</span>
+        <p style="font-size:0.9rem;color:var(--muted);margin-top:0.8rem;">Trained in Paris and Barcelona, Marco brings 20 years of fine dining expertise to every tasting menu.</p>
+      </div>
+    </div>
+
+    <div class="chef-card reveal" style="transition-delay:0.1s">
+      <div style="overflow:hidden;">
+        <img class="chef-card-img" src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=500&q=80" alt="Chef Amara Nkosi" />
+      </div>
+      <div class="chef-info">
+        <span class="chef-name">Amara Nkosi</span>
+        <span class="chef-role">Pastry Chef</span>
+        <p style="font-size:0.9rem;color:var(--muted);margin-top:0.8rem;">Amara transforms dessert from an afterthought into the most anticipated moment of every meal.</p>
+      </div>
+    </div>
+
+    <div class="chef-card reveal" style="transition-delay:0.2s">
+      <div style="overflow:hidden;">
+        <img class="chef-card-img" src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=500&q=80" alt="Sophia Tan" />
+      </div>
+      <div class="chef-info">
+        <span class="chef-name">Sophia Tan</span>
+        <span class="chef-role">Head Sommelier</span>
+        <p style="font-size:0.9rem;color:var(--muted);margin-top:0.8rem;">With certifications from WSET and CMS, Sophia's wine pairings elevate every dish on the menu.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/layout.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
