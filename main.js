@@ -1,90 +1,92 @@
-// main.js - Menu Rendering & Interactions
-document.addEventListener('DOMContentLoaded', function() {
-    // Helper function to create menu card DOM elements
-    function createMenuItemCard(item) {
-        const card = document.createElement('div');
-        card.className = 'menu-card';
-        
-        // Image area with emoji/icon
-        const imgDiv = document.createElement('div');
-        imgDiv.className = 'card-img';
-        imgDiv.innerHTML = `<span style="font-size: 3.5rem;">${item.icon || '🍽️'}</span>`;
-        
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'card-content';
-        
-        const headerDiv = document.createElement('div');
-        headerDiv.className = 'dish-header';
-        
-        const nameSpan = document.createElement('span');
-        nameSpan.className = 'dish-name';
-        nameSpan.textContent = item.name;
-        
-        const priceSpan = document.createElement('span');
-        priceSpan.className = 'dish-price';
-        priceSpan.textContent = item.price;
-        
-        headerDiv.appendChild(nameSpan);
-        headerDiv.appendChild(priceSpan);
-        
-        const descPara = document.createElement('p');
-        descPara.className = 'dish-desc';
-        descPara.textContent = item.desc;
-        
-        const tagSpan = document.createElement('span');
-        tagSpan.className = 'dish-tag';
-        tagSpan.innerHTML = `<i class="fas fa-tag"></i> ${item.tag}`;
-        
-        contentDiv.appendChild(headerDiv);
-        contentDiv.appendChild(descPara);
-        contentDiv.appendChild(tagSpan);
-        
-        card.appendChild(imgDiv);
-        card.appendChild(contentDiv);
-        
-        return card;
-    }
-    
-    // Render each section if the grid container exists on page
-    const appetizersGrid = document.getElementById('appetizers-grid');
-    if (appetizersGrid && menuItems.appetizers) {
-        menuItems.appetizers.forEach(item => {
-            appetizersGrid.appendChild(createMenuItemCard(item));
-        });
-    }
-    
-    const mainsGrid = document.getElementById('mains-grid');
-    if (mainsGrid && menuItems.mains) {
-        menuItems.mains.forEach(item => {
-            mainsGrid.appendChild(createMenuItemCard(item));
-        });
-    }
-    
-    const dessertsGrid = document.getElementById('desserts-grid');
-    if (dessertsGrid && menuItems.desserts) {
-        menuItems.desserts.forEach(item => {
-            dessertsGrid.appendChild(createMenuItemCard(item));
-        });
-    }
-    
-    const beveragesGrid = document.getElementById('beverages-grid');
-    if (beveragesGrid && menuItems.beverages) {
-        menuItems.beverages.forEach(item => {
-            beveragesGrid.appendChild(createMenuItemCard(item));
-        });
-    }
-    
-    // Smooth scroll for any anchor links (if any)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (targetId !== '#' && targetId !== '#') {
-                const targetElem = document.querySelector(targetId);
-                if (targetElem) {
-                    e.preventDefault();
-                    targetElem.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
+// iFoods — Main JavaScript
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── Navbar scroll effect ──
+  const nav = document.querySelector('.nav');
+  if (nav) {
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
     });
+  }
+
+  // ── Mobile menu ──
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // ── Active nav link ──
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+
+  // ── Scroll reveal ──
+  const reveals = document.querySelectorAll('.reveal');
+  if (reveals.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  }
+
+  // ── Menu tabs ──
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const menuSections = document.querySelectorAll('.menu-section');
+
+  if (tabBtns.length && menuSections.length) {
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        menuSections.forEach(sec => {
+          sec.style.display = sec.dataset.section === target ? 'grid' : 'none';
+        });
+      });
+    });
+  }
+
+  // ── Contact form (demo) ──
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const original = btn.textContent;
+      btn.textContent = 'Message Sent ✓';
+      btn.style.background = '#2d6a4f';
+      btn.style.borderColor = '#2d6a4f';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        btn.style.color = '';
+        contactForm.reset();
+      }, 3000);
+    });
+  }
+
 });
