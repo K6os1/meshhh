@@ -1,102 +1,186 @@
-<!-- contact.html - Contact & Reservation Info -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Savory Bites</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — iFoods Restaurant</title>
+  <meta name="description" content="Get in touch with iFoods — find us, call us, or send a message." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .contact-hero {
+      padding: 10rem 4rem 4rem;
+      text-align: center;
+      position: relative;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem,5vw,4.5rem);
+      color: var(--white);
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail-icon {
+      width: 42px; height: 42px;
+      border: 1px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+    .contact-detail-text strong {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+    .contact-detail-text span {
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .map-embed {
+      width: 100%;
+      height: 380px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      color: var(--muted);
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .map-embed span { font-size: 2.5rem; }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <h1>Savory Bites</h1>
-                    <p>FARM TO TABLE • MODERN CUISINE</p>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Menu</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<div class="contact-hero">
+  <span class="section-tag">We'd Love to Hear From You</span>
+  <h1>Get in Touch</h1>
+  <div class="divider" style="max-width:300px;margin:1.2rem auto 0;"><span class="divider-icon">✦</span></div>
+</div>
+
+<!-- ══════════════ CONTACT SECTION ══════════════ -->
+<div class="section">
+  <div class="contact-grid">
+
+    <!-- Left: Details + Map -->
+    <div class="reveal">
+      <h2 style="font-family:var(--font-display);font-size:2rem;color:var(--white);font-weight:400;margin-bottom:2rem;">Find Us</h2>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div class="contact-detail-text">
+          <strong>Address</strong>
+          <span>123 Gourmet Lane<br>Gaborone, Botswana</span>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <section class="contact-hero">
-            <div class="container">
-                <h1>Get in Touch</h1>
-                <p>Reservations, inquiries, or just saying hello — we'd love to hear from you.</p>
-            </div>
-        </section>
-
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2><i class="fas fa-address-card"></i> Visit Us</h2>
-                    <div class="contact-detail">
-                        <i class="fas fa-location-dot"></i>
-                        <p>42 Gourmet Street, Foodville, CA 90210</p>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-phone-alt"></i>
-                        <p>(555) 123-4567</p>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-envelope"></i>
-                        <p>hello@savorybites.com</p>
-                    </div>
-                    <div class="contact-detail">
-                        <i class="fas fa-clock"></i>
-                        <p>Mon-Thu: 11am-9pm | Fri-Sat: 11am-10pm | Sun: 10am-8pm</p>
-                    </div>
-                </div>
-
-                <div class="reservation-note">
-                    <h3><i class="fas fa-calendar-check"></i> Make a Reservation</h3>
-                    <p>We accept reservations for parties up to 8 guests. For larger groups or private events, please give us a call.</p>
-                    <p><i class="fas fa-phone"></i> Call us directly at:</p>
-                    <span class="phone-big">(555) 123-4567</span>
-                    <p style="margin-top: 24px; font-size: 0.9rem;">We look forward to serving you! Walk-ins are always welcome based on availability.</p>
-                </div>
-            </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <div class="contact-detail-text">
+          <strong>Phone</strong>
+          <span>+267 123 4567</span>
         </div>
-    </main>
+      </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4>Savory Bites</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 42 Gourmet Street, Foodville, CA 90210</p>
-                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> hello@savorybites.com</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Hours</h4>
-                    <p>Mon - Thu: 11am - 9pm</p>
-                    <p>Fri - Sat: 11am - 10pm</p>
-                    <p>Sunday: 10am - 8pm (Brunch)</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Savory Bites — Menu display only. Reservations by phone.</p>
-            </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <div class="contact-detail-text">
+          <strong>Email</strong>
+          <span>hello@ifoods.com</span>
         </div>
-    </footer>
+      </div>
 
-    <script src="main.js"></script>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🕐</div>
+        <div class="contact-detail-text">
+          <strong>Opening Hours</strong>
+          <span>Monday – Sunday<br>8:00 am – 10:00 pm</span>
+        </div>
+      </div>
+
+      <div class="map-embed" style="margin-top:2rem;">
+        <span>🗺️</span>
+        <p>123 Gourmet Lane, Gaborone</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border:1px solid var(--gold);padding:0.5rem 1.2rem;font-size:0.7rem;letter-spacing:0.15em;">Open in Google Maps →</a>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="reveal">
+      <h2 style="font-family:var(--font-display);font-size:2rem;color:var(--white);font-weight:400;margin-bottom:2rem;">Send a Message</h2>
+
+      <form class="contact-form" id="contactForm">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+          <div class="form-group">
+            <label class="form-label" for="firstName">First Name</label>
+            <input class="form-input" type="text" id="firstName" name="firstName" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Doe" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="john@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="subject">Subject</label>
+          <input class="form-input" type="text" id="subject" name="subject" placeholder="Private event enquiry" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════ INFO BAND ══════════════ -->
+<div class="info-band" style="margin-top:0;">
+  <div class="info-cell">
+    <span class="info-icon">🚗</span>
+    <span class="info-label">Parking</span>
+    <span class="info-value">Free parking available<br>on site</span>
+  </div>
+  <div class="info-cell">
+    <span class="info-icon">♿</span>
+    <span class="info-label">Accessibility</span>
+    <span class="info-value">Fully wheelchair accessible<br>entrance and facilities</span>
+  </div>
+  <div class="info-cell">
+    <span class="info-icon">🐾</span>
+    <span class="info-label">Pet Policy</span>
+    <span class="info-value">Leashed dogs welcome<br>on our terrace</span>
+  </div>
+</div>
+
+<script src="../js/layout.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
