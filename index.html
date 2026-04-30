@@ -1,127 +1,140 @@
-<!-- index.html - Home & Menu Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savory Bites | Home & Menu</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iFoods — Fine Dining Restaurant</title>
+  <meta name="description" content="iFoods — an unforgettable dining experience rooted in seasonal ingredients and timeless technique." />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <h1>Savory Bites</h1>
-                    <p>FARM TO TABLE • MODERN CUISINE</p>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Menu</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+<!-- Nav & Footer injected by layout.js -->
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Delicious &amp; Amazing</span>
+    <h1>Taste the <em>Extraordinary</em></h1>
+    <div class="divider"><span class="divider-icon">✦</span></div>
+    <p>Seasonal ingredients, timeless technique, and an atmosphere crafted for unforgettable moments.</p>
+    <a href="pages/menu.html" class="btn btn-gold">Explore Our Menu</a>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ══════════════ INFO BAND ══════════════ -->
+<div class="info-band">
+  <div class="info-cell">
+    <span class="info-icon">📍</span>
+    <span class="info-label">Location</span>
+    <span class="info-value">123 Gourmet Lane<br>Gaborone, BW</span>
+  </div>
+  <div class="info-cell">
+    <span class="info-icon">🕐</span>
+    <span class="info-label">Hours</span>
+    <span class="info-value">Daily: 8:00 am – 10:00 pm</span>
+  </div>
+  <div class="info-cell">
+    <span class="info-icon">📞</span>
+    <span class="info-label">Reservations</span>
+    <span class="info-value">+267 123 4567</span>
+  </div>
+</div>
+
+<!-- ══════════════ FEATURED MENU PREVIEW ══════════════ -->
+<div class="band">
+  <div class="section">
+    <div class="section-header reveal">
+      <span class="section-tag">Starter Menu</span>
+      <h2>A Taste of Our Menu</h2>
+      <p>Hand-crafted dishes from our kitchen — fresh, seasonal, and made with love.</p>
+    </div>
+
+    <div class="menu-grid reveal">
+      <!-- Row 1 -->
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&q=80" alt="Greek Salad" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Greek Salad</span>
+            <span class="menu-item-price">$25.50</span>
+          </div>
+          <p class="menu-item-desc">Tomatoes, green bell pepper, sliced cucumber, olives, onion, and feta cheese.</p>
+          <span class="menu-item-badge">Vegetarian</span>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Seasonal Menu</h2>
-                <p>Thoughtfully crafted dishes using locally sourced ingredients. Explore our offerings below.</p>
-                <div class="hero-badge"><i class="fas fa-eye"></i> Menu preview only — no online ordering</div>
-            </div>
-        </section>
-
-        <div class="container">
-            <!-- Appetizers Section -->
-            <section id="appetizers" class="menu-section">
-                <div class="section-title">
-                    <i class="fas fa-seedling"></i> Appetizers
-                </div>
-                <div class="menu-grid" id="appetizers-grid"></div>
-            </section>
-
-            <!-- Main Courses Section -->
-            <section id="mains" class="menu-section">
-                <div class="section-title">
-                    <i class="fas fa-utensils"></i> Main Courses
-                </div>
-                <div class="menu-grid" id="mains-grid"></div>
-            </section>
-
-            <!-- Desserts Section -->
-            <section id="desserts" class="menu-section">
-                <div class="section-title">
-                    <i class="fas fa-cake-candy"></i> Desserts
-                </div>
-                <div class="menu-grid" id="desserts-grid"></div>
-            </section>
-
-            <!-- Beverages Section -->
-            <section id="beverages" class="menu-section">
-                <div class="section-title">
-                    <i class="fas fa-wine-bottle"></i> Beverages
-                </div>
-                <div class="menu-grid" id="beverages-grid"></div>
-            </section>
-
-            <!-- Chef's Special Note -->
-            <div class="special-note">
-                <i class="fas fa-star-of-life"></i>
-                <h3>Chef's Daily Special</h3>
-                <p>Ask your server about today's seasonal creation featuring fresh market finds.</p>
-            </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&q=80" alt="Tokusen Wagyu" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Tokusen Wagyu</span>
+            <span class="menu-item-price">$39.00</span>
+          </div>
+          <p class="menu-item-desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
+          <span class="menu-item-badge">Chef's Choice</span>
         </div>
-    </main>
+      </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4>Savory Bites</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 42 Gourmet Street, Foodville, CA 90210</p>
-                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> hello@savorybites.com</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Hours</h4>
-                    <p>Mon - Thu: 11am - 9pm</p>
-                    <p>Fri - Sat: 11am - 10pm</p>
-                    <p>Sunday: 10am - 8pm (Brunch)</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Savory Bites — Menu display only. Reservations by phone.</p>
-            </div>
+      <!-- Row 2 -->
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=200&q=80" alt="Lasagne" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Lasagne</span>
+            <span class="menu-item-price">$40.00</span>
+          </div>
+          <p class="menu-item-desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
         </div>
-    </footer>
+      </div>
 
-    <script src="menu-data.js"></script>
-    <script src="main.js"></script>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="Olivas Rellenas" />
+        <div class="menu-item-body">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Olivas Rellenas</span>
+            <span class="menu-item-price">$25.50</span>
+          </div>
+          <p class="menu-item-desc">Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:3rem;" class="reveal">
+      <a href="pages/menu.html" class="btn btn-outline">View Full Menu →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ GALLERY STRIP ══════════════ -->
+<div class="section">
+  <div class="section-header reveal">
+    <span class="section-tag">Our Atmosphere</span>
+    <h2>Where Every Detail Matters</h2>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Restaurant interior" /></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=400&q=80" alt="Plated dish" /></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80" alt="Cocktails" /></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&q=80" alt="Dessert" /></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Dining room" /></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1482049016688-2d3e1291311a?w=400&q=80" alt="Food close up" /></div>
+  </div>
+</div>
+
+<!-- ══════════════ CTA ══════════════ -->
+<div class="band" style="text-align:center; padding: 6rem 2rem;">
+  <div class="reveal">
+    <span class="section-tag">Private Events</span>
+    <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);color:var(--white);margin:1rem 0 1.5rem;">Host Your Special Occasion With Us</h2>
+    <p style="color:var(--muted);max-width:520px;margin:0 auto 2.5rem;">From intimate dinners to milestone celebrations — we create the perfect setting for your most cherished moments.</p>
+    <a href="pages/contact.html" class="btn btn-gold">Get in Touch</a>
+  </div>
+</div>
+
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
