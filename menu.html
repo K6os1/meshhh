@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Menu — iFoods Restaurant</title>
+  <meta name="description" content="Browse the full iFoods menu — appetizers, main dishes, desserts, and drinks." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .menu-page-hero {
+      position: relative;
+      padding: 10rem 4rem 5rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .menu-page-hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80') center/cover no-repeat;
+    }
+    .menu-page-hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(10,10,10,0.82);
+    }
+    .menu-page-hero-content { position: relative; z-index: 1; }
+    .menu-page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem,6vw,5.5rem);
+      color: var(--white); font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    .menu-note {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .menu-section-label {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .menu-section-label h3 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem,3vw,2.8rem);
+      color: var(--white);
+      font-weight: 400;
+    }
+    .menu-section-label-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(to right, var(--border), transparent);
+    }
+    .menu-block { margin-bottom: 5rem; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ HERO ══════════════ -->
+<div class="menu-page-hero">
+  <div class="menu-page-hero-bg"></div>
+  <div class="menu-page-hero-content">
+    <span class="section-tag">Crafted with Passion</span>
+    <h1>Our Menu</h1>
+    <div class="divider" style="margin-top:1.2rem;"><span class="divider-icon">✦</span></div>
+  </div>
+</div>
+
+<!-- ══════════════ MENU CONTENT ══════════════ -->
+<div class="section">
+
+  <div class="menu-tabs">
+    <button class="tab-btn active" data-tab="appetizers">Appetizers</button>
+    <button class="tab-btn" data-tab="mains">Main Dishes</button>
+    <button class="tab-btn" data-tab="desserts">Desserts</button>
+    <button class="tab-btn" data-tab="drinks">Drinks</button>
+  </div>
+
+  <div class="menu-note">
+    ✦ All dishes are prepared fresh daily. Prices shown are inclusive of VAT. Please inform your server of any dietary requirements.
+  </div>
+
+  <!-- ─── APPETIZERS ─── -->
+  <div class="menu-section" data-section="appetizers" id="appetizers">
+    <div class="menu-section-label reveal">
+      <h3>Appetizers</h3>
+      <div class="menu-section-label-line"></div>
+      <span class="section-tag" style="white-space:nowrap;">Starter Menu</span>
+    </div>
+
+    <div class="menu-grid reveal">
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&q=80" alt="Greek Salad" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Greek Salad</span><span class="menu-item-price">$25.50</span></div>
+          <p class="menu-item-desc">Tomatoes, green bell pepper, sliced cucumber, olives, onion, and feta cheese.</p>
+          <span class="menu-item-badge">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&q=80" alt="Tokusen Wagyu" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Tokusen Wagyu</span><span class="menu-item-price">$39.00</span></div>
+          <p class="menu-item-desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
+          <span class="menu-item-badge">Chef's Choice</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=200&q=80" alt="Lasagne" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Lasagne</span><span class="menu-item-price">$40.00</span></div>
+          <p class="menu-item-desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="Olivas Rellenas" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Olivas Rellenas</span><span class="menu-item-price">$25.50</span></div>
+          <p class="menu-item-desc">Avocados with crab meat, red onion, stuffed red bell pepper and green bell pepper.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=200&q=80" alt="Butternut Pumpkin Soup" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Butternut Pumpkin Soup</span><span class="menu-item-price">$10.00</span></div>
+          <p class="menu-item-desc">Slow-roasted butternut, cream, nutmeg, and toasted seeds. Served warm.</p>
+          <span class="menu-item-badge">Seasonal</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1559742811-822873691df8?w=200&q=80" alt="Opu Fish" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Opu Fish Ceviche</span><span class="menu-item-price">$49.00</span></div>
+          <p class="menu-item-desc">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── MAIN DISHES ─── -->
+  <div class="menu-section" data-section="mains" id="mains" style="display:none;">
+    <div class="menu-section-label reveal">
+      <h3>Main Dishes</h3>
+      <div class="menu-section-label-line"></div>
+      <span class="section-tag" style="white-space:nowrap;">Signature Mains</span>
+    </div>
+
+    <div class="menu-grid reveal">
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&q=80" alt="Grilled Salmon" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Grilled Atlantic Salmon</span><span class="menu-item-price">$55.00</span></div>
+          <p class="menu-item-desc">Pan-seared with lemon butter sauce, capers, dill, served with seasonal vegetables.</p>
+          <span class="menu-item-badge">Chef's Choice</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&q=80" alt="Wagyu Steak" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Wagyu Ribeye</span><span class="menu-item-price">$89.00</span></div>
+          <p class="menu-item-desc">A5 grade wagyu, charcoal-grilled, served with truffle mash and jus.</p>
+          <span class="menu-item-badge">Premium</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=200&q=80" alt="Duck Confit" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Duck Confit</span><span class="menu-item-price">$62.00</span></div>
+          <p class="menu-item-desc">Slow-cooked duck leg, crispy skin, cherry reduction, roasted root vegetables.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&q=80" alt="Pasta Primavera" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Pasta Primavera</span><span class="menu-item-price">$38.00</span></div>
+          <p class="menu-item-desc">Fresh tagliatelle, garden vegetables, white wine, parmesan, and fresh herbs.</p>
+          <span class="menu-item-badge">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&q=80" alt="Lamb Rack" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Herb-Crusted Lamb Rack</span><span class="menu-item-price">$74.00</span></div>
+          <p class="menu-item-desc">Dijon and herb crust, roasted garlic, rosemary jus, and dauphinoise potato.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=200&q=80" alt="Risotto" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Truffle Mushroom Risotto</span><span class="menu-item-price">$45.00</span></div>
+          <p class="menu-item-desc">Arborio rice, wild mushrooms, truffle oil, aged parmesan, white wine reduction.</p>
+          <span class="menu-item-badge">Vegetarian</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── DESSERTS ─── -->
+  <div class="menu-section" data-section="desserts" id="desserts" style="display:none;">
+    <div class="menu-section-label reveal">
+      <h3>Desserts</h3>
+      <div class="menu-section-label-line"></div>
+      <span class="section-tag" style="white-space:nowrap;">Sweet Endings</span>
+    </div>
+
+    <div class="menu-grid reveal">
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=200&q=80" alt="Crème Brûlée" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Crème Brûlée</span><span class="menu-item-price">$18.00</span></div>
+          <p class="menu-item-desc">Classic Tahitian vanilla custard with a perfectly caramelised sugar crust.</p>
+          <span class="menu-item-badge">Signature</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=200&q=80" alt="Chocolate Fondant" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Dark Chocolate Fondant</span><span class="menu-item-price">$22.00</span></div>
+          <p class="menu-item-desc">Warm 70% dark chocolate lava cake, Madagascan vanilla ice cream.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1482049016688-2d3e1291311a?w=200&q=80" alt="Tiramisu" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Tiramisu</span><span class="menu-item-price">$19.00</span></div>
+          <p class="menu-item-desc">Espresso-soaked savoiardi, mascarpone, rich cocoa dusting. Made in-house daily.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1559742811-822873691df8?w=200&q=80" alt="Panna Cotta" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Berry Panna Cotta</span><span class="menu-item-price">$16.00</span></div>
+          <p class="menu-item-desc">Silky vanilla panna cotta with seasonal berry coulis and fresh mint.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── DRINKS ─── -->
+  <div class="menu-section" data-section="drinks" id="drinks" style="display:none;">
+    <div class="menu-section-label reveal">
+      <h3>Drinks</h3>
+      <div class="menu-section-label-line"></div>
+      <span class="section-tag" style="white-space:nowrap;">Beverages</span>
+    </div>
+
+    <div class="menu-grid reveal">
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=200&q=80" alt="Cocktails" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Signature Cocktails</span><span class="menu-item-price">from $14.00</span></div>
+          <p class="menu-item-desc">Ask your server about our seasonal cocktail menu, crafted fresh each week.</p>
+          <span class="menu-item-badge">Seasonal</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=200&q=80" alt="Wine" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Wine Selection</span><span class="menu-item-price">from $12.00</span></div>
+          <p class="menu-item-desc">Curated Old and New World wines. Ask for our sommelier-recommended pairing.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&q=80" alt="Mocktails" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Fresh Mocktails</span><span class="menu-item-price">$9.00</span></div>
+          <p class="menu-item-desc">Hibiscus fizz, passion fruit cooler, cucumber mint, and seasonal specials.</p>
+          <span class="menu-item-badge">Non-Alcoholic</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img class="menu-item-img" src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=200&q=80" alt="Coffee" />
+        <div class="menu-item-body">
+          <div class="menu-item-top"><span class="menu-item-name">Specialty Coffee</span><span class="menu-item-price">from $5.00</span></div>
+          <p class="menu-item-desc">Single-origin espresso, pour-over, flat white, and cold brew — all made in-house.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/layout.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
